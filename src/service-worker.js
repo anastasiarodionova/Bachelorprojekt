@@ -22,6 +22,20 @@ registerRoute(
   })
 );
 
+self.addEventListener("push", function(event) {
+    let push_message = event.data.text();
+
+    const options = {
+      body: push_message.body,
+      icon: "./img/icons/32x32.png"
+    };
+    event.waitUntil(
+      self.registration.showNotification("my notification", options)
+    );
+  });
+
+
+
 self.addEventListener("fetch", function (event) {
   event.respondWith(
     caches.match(event.request).then(function (response) {
