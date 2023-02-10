@@ -4,7 +4,30 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
+
+
 </template>
+
+<script>
+import { useStore } from "vuex";
+import { computed } from "vue";
+
+export default {
+  name: "App",
+  setup() {
+    const store = useStore();
+    store.dispatch("POPULATE_FROM_CACHE");
+    const translations = computed(() => store.getters.translations);
+    // this will add a new item to you cache
+    // store.commit("addTranslation", {
+    //   id: 78965,
+    //   name: "another",
+    // });
+    return { translations };
+  },
+};
+
+</script>
 
 <style>
 #app {
