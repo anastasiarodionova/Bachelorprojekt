@@ -1,6 +1,6 @@
 # Webshop
 
-logo.png
+![alt text](C:\Users\anast\OneDrive\Desktop\Bachelor_IKT\web1\public\img\logo.png) 
 
 ## Project setup
 ```
