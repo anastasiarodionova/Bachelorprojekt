@@ -1,4 +1,6 @@
-# web1
+# Webshop
+
+logo.png
 
 ## Project setup
 ```
