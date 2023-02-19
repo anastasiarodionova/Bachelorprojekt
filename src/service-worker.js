@@ -22,6 +22,29 @@ registerRoute(
   })
 );
 
+self.addEventListener("install", (event) => {
+  console.log("service worker --> installing ...", event);
+  event.waitUntil(
+    caches.open().then((cache) => {
+      console.log("Service-Worker-Cache erzeugt und offen");
+      cache.addAll([
+        "/",
+        "/index.html",
+        "/src/js/app.js",
+        "/src/js/feed.js",
+        "/src/js/material.min.js",
+        "/src/js/idb.js",
+        "/src/css/app.css",
+        "/src/css/feed.css",
+        "/src/images/1.png",
+        "https://fonts.googleapis.com/css?family=Roboto:400,700",
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "https://code.getmdl.io/1.3.0/material.purple-pink.min.css",
+      ]);
+    })
+  );
+}); 
+
 self.addEventListener("push", function(event) {
     let push_message = event.data.text();
 
@@ -32,7 +55,7 @@ self.addEventListener("push", function(event) {
     event.waitUntil(
       self.registration.showNotification("my notification", options)
     );
-  });
+  }); 
 
 
 self.addEventListener("fetch", function (event) {

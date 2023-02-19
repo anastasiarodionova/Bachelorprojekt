@@ -1,0 +1,34 @@
+[debug] [2023-02-19T04:10:39.519Z] ----------------------------------------------------------------------
+[debug] [2023-02-19T04:10:39.521Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\anast\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-02-19T04:10:39.521Z] CLI Version:   11.23.1
+[debug] [2023-02-19T04:10:39.522Z] Platform:      win32
+[debug] [2023-02-19T04:10:39.522Z] Node Version:  v18.13.0
+[debug] [2023-02-19T04:10:39.523Z] Time:          Sun Feb 19 2023 05:10:39 GMT+0100 (Central European Standard Time)
+[debug] [2023-02-19T04:10:39.523Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-19T04:10:39.652Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-19T04:10:39.652Z] > authorizing via signed-in user (anastasyarodionova@gmail.com)
+[debug] [2023-02-19T04:10:39.652Z] [iam] checking project webshop-24e2d for permissions ["firebase.projects.get"]
+[debug] [2023-02-19T04:10:39.654Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/webshop-24e2d:testIamPermissions [none]
+[debug] [2023-02-19T04:10:39.654Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/webshop-24e2d:testIamPermissions x-goog-quota-user=projects/webshop-24e2d
+[debug] [2023-02-19T04:10:39.655Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webshop-24e2d:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-19T04:10:40.082Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/webshop-24e2d:testIamPermissions 200
+[debug] [2023-02-19T04:10:40.084Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webshop-24e2d:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-19T04:10:40.088Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d [none]
+[debug] [2023-02-19T04:10:40.375Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d 200
+[debug] [2023-02-19T04:10:40.375Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d {"projectId":"webshop-24e2d","projectNumber":"452516455480","displayName":"webshop","name":"projects/webshop-24e2d","resources":{"hostingSite":"webshop-24e2d","realtimeDatabaseInstance":"webshop-24e2d-default-rtdb","storageBucket":"webshop-24e2d.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_46f39ece-84b9-49b6-a760-5fb038856c5b"}
+[info] 
+[info] === Serving from 'C:\Users\anast\OneDrive\Desktop\Bachelor_IKT\web1'...
+[info] 
+[debug] [2023-02-19T04:10:40.384Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/webshop-24e2d/sites 
+[debug] [2023-02-19T04:10:41.374Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/webshop-24e2d/sites 200
+[debug] [2023-02-19T04:10:41.374Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/webshop-24e2d/sites {"sites":[{"name":"projects/webshop-24e2d/sites/webshop-24e2d","defaultUrl":"https://webshop-24e2d.web.app","appId":"1:452516455480:web:2e7a0f42235aeb019eb2cd","type":"DEFAULT_SITE"}]}
+[debug] [2023-02-19T04:10:41.375Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d/webApps/1:452516455480:web:2e7a0f42235aeb019eb2cd/config [none]
+[debug] [2023-02-19T04:10:42.294Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d/webApps/1:452516455480:web:2e7a0f42235aeb019eb2cd/config 200
+[debug] [2023-02-19T04:10:42.294Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d/webApps/1:452516455480:web:2e7a0f42235aeb019eb2cd/config {"projectId":"webshop-24e2d","appId":"1:452516455480:web:2e7a0f42235aeb019eb2cd","databaseURL":"https://webshop-24e2d-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"webshop-24e2d.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCERaAm4V9B7LT8gLox3_yYVL6vpUf1SVY","authDomain":"webshop-24e2d.firebaseapp.com","messagingSenderId":"452516455480"}
+[debug] [2023-02-19T04:10:42.309Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d [none]
+[debug] [2023-02-19T04:10:42.568Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d 200
+[debug] [2023-02-19T04:10:42.568Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webshop-24e2d {"projectId":"webshop-24e2d","projectNumber":"452516455480","displayName":"webshop","name":"projects/webshop-24e2d","resources":{"hostingSite":"webshop-24e2d","realtimeDatabaseInstance":"webshop-24e2d-default-rtdb","storageBucket":"webshop-24e2d.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_46f39ece-84b9-49b6-a760-5fb038856c5b"}
+[info] i  hosting[webshop-24e2d]: Serving hosting files from: dist {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist\u001b[22m"}}
+[info] +  hosting[webshop-24e2d]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [19/Feb/2023:04:11:04 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [19/Feb/2023:04:11:04 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\""}}
