@@ -1,7 +1,11 @@
 <template>
-  <div class="home">
-    
+
+  <body>
+  <div id="home"> 
   </div>
+
+  </body>
+ 
 </template>
 
 <script>

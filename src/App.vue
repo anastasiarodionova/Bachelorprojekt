@@ -1,18 +1,18 @@
 <template>
   <nav>
-    <img alt="logo" src="./assets/logo.png">
     <div class="container">
-    <router-link to="/home">Home   </router-link> |
-    <router-link to="/products">Products   </router-link>
-    <router-link to="/about">About Me      </router-link>
-    <router-link to="/contact">Contact us  </router-link></div>
+      <router-link to="/home">Home </router-link> |
+      <router-link to="/products">Products </router-link>
+      <router-link to="/about">About Me </router-link>
+      <router-link to="/contact">Contact us </router-link>
+    </div>
   </nav>
   <router-view />
 </template>
 
 <script>
 import { useStore } from "vuex";
-import { computed} from "vue";
+import { computed } from "vue";
 //import { collection, getDocs } from "firebase/firestore";
 //import { db } from "./firebase/firebase.js";
 
@@ -28,8 +28,8 @@ export default {
     //   name: "another",
     // });
     return { translations };
-  }
-}
+  },
+};
 
 /*
 onMounted(async () => {
@@ -38,9 +38,6 @@ onMounted(async () => {
     console.log(doc.id, " => ", doc.data());
   })
 }) */
-
-
-
 </script>
 
 <style>
@@ -50,10 +47,6 @@ onMounted(async () => {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #dcacfc;
-}
-
-logo{
-  text-align: left;
 }
 
 .container {

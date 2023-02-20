@@ -1,38 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <title>AR Webshop</title>
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="./src/assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="../src/assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="./src/assets/css/templatemo-hexashop.css">
-
-    <link rel="stylesheet" href="./src/assets/css/owl-carousel.css">
-
-    <link rel="stylesheet" href="./src/assets/css/lightbox.css">
-
-    </head>
+<template>
+  <html>
     <body>
-        <div id="app"></div>
-        <div id="token"></div>
-        <div id="message"></div>
-        <div id="error"></div>
-    
-    
+      <component :is="'script'" :src="scriptSource"></component>
+      <!-- Bootstrap -->
+      <component :is="'script'" :src="scriptSource2"></component>
+      <component :is="'script'" :src="scriptSource3"></component>
+
+      <!-- Plugins -->
+      <component :is="'script'" :src="scriptSource4"></component>
+      <component :is="'script'" :src="scriptSource5"></component>
+      <component :is="'script'" :src="scriptSource6"></component>
+      <component :is="'script'" :src="scriptSource7"></component>
+      <component :is="'script'" :src="scriptSource8"></component>
+      <component :is="'script'" :src="scriptSource9"></component>
+      <component :is="'script'" :src="scriptSource10"></component>
+      <component :is="'script'" :src="scriptSource11"></component>
+      <component :is="'script'" :src="scriptSource12"></component>
+      <component :is="'script'" :src="scriptSource13"></component>
+
+      <!-- Global Init -->
+      <component :is="'script'" :src="scriptSource14"></component>
+      
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -41,16 +29,20 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="../src/assets/images/logo.png">
+                            <img src="assets/images/logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                          <!--   <li class="scroll-to-section"><a href="#home" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#products">Products</a></li>
-                            <li class="scroll-to-section"><a href="#about">About me</a></li>
-                            <li class="scroll-to-section"><a href="#contact">Contact us</a></li>  -->
-                       
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">Products</a></li>
+                            <li class="scroll-to-section"><a href="#women">About me</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Contact us</a></li>
+                            
+                        </ul>         
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
                         <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
@@ -73,7 +65,7 @@
                                     <a href="#">Purchase Now!</a>
                                 </div>
                             </div>
-                            <img src="./src/assets/images/left-banner-image.jpg" alt="">
+                            <img src="assets/images/left-banner-image.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -92,7 +84,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="./src/assets/images/baner-right-image-01.jpg">
+                                        <img src="assets/images/baner-right-image-01.jpg">
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +99,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="./src/assets/images/baner-right-image-02.jpg">
+                                        <img src="assets/images/baner-right-image-02.jpg">
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +115,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="./src/assets/images/baner-right-image-03.jpg">
+                                        <img src="assets/images/baner-right-image-03.jpg">
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +133,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="./src/assets/images/baner-right-image-04.jpg">
+                                        <img src="assets/images/baner-right-image-04.jpg">
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +172,7 @@
                                             <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="./src/assets/images/women-01.jpg" alt="">
+                                    <img src="assets/images/women-01.jpg" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>New Collection</h4>
@@ -203,7 +195,7 @@
                                             <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="./src/assets/images/women-02.jpg" alt="">
+                                    <img src="assets/images/women-02.jpg" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Fashion design</h4>
@@ -226,7 +218,7 @@
                                             <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="./src/assets/images/women-03.jpg" alt="">
+                                    <img src="assets/images/women-03.jpg" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Spring Collection</h4>
@@ -249,7 +241,7 @@
                                             <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="./src/assets/images/women-01.jpg" alt="">
+                                    <img src="assets/images/women-01.jpg" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Classic Spring</h4>
@@ -301,12 +293,12 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="first-image">
-                                    <img src="./src/assets/images/explore-image-01.jpg" alt="">
+                                    <img src="assets/images/explore-image-01.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="second-image">
-                                    <img src="./src/assets/images/explore-image-02.jpg" alt="">
+                                    <img src="assets/images/explore-image-02.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -345,7 +337,7 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="./src/assets/images/instagram-01.jpg" alt="">
+                        <img src="assets/images/instagram-01.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -356,7 +348,7 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="./src/assets/images/instagram-02.jpg" alt="">
+                        <img src="assets/images/instagram-02.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -367,7 +359,7 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="./src/assets/images/instagram-03.jpg" alt="">
+                        <img src="assets/images/instagram-03.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -378,7 +370,7 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="./src/assets/images/instagram-04.jpg" alt="">
+                        <img src="assets/images/instagram-04.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -389,7 +381,7 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="./src/assets/images/instagram-05.jpg" alt="">
+                        <img src="assets/images/instagram-05.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -400,7 +392,7 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="./src/assets/images/instagram-06.jpg" alt="">
+                        <img src="assets/images/instagram-06.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -450,7 +442,7 @@
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="./src/assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
                         </div>
                     
                     </div>
@@ -471,56 +463,34 @@
                         <li><a href="#">Shipping</a></li>
                     </ul>
                 </div>
-            
-                
-                            
-                        </ul>
+
                     </div>
                 </div>
-            </div>
-        </div>
     </footer>
     
+    </body>
+  </html>
+</template>
 
-    <!-- jQuery -->
-    <script src="./src/assets/js/jquery-2.1.0.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="./src/assets/js/popper.js"></script>
-    <script src="./src/assets/js/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="./src/assets/js/owl-carousel.js"></script>
-    <script src="./src/assets/js/accordions.js"></script>
-    <script src="./src/assets/js/datepicker.js"></script>
-    <script src="./src/assets/js/scrollreveal.min.js"></script>
-    <script src="./src/assets/js/waypoints.min.js"></script>
-    <script src="./src/assets/js/jquery.counterup.min.js"></script>
-    <script src="./src/assets/js/imgfix.min.js"></script> 
-    <script src="./src/assets/js/slick.js"></script> 
-    <script src="./src/assets/js/lightbox.js"></script> 
-    <script src="./src/assets/js/isotope.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="./src/assets/js/custom.js"></script>
-
-    <script>
-
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
-
-    </script>
-
-  </body>
-</html>
+<script>
+export default {
+  data() {
+    return {
+      scriptSource: "assets/js/jquery-2.1.0.min.js",
+      scriptSource2: 'assets/js/popper.js',
+      scriptSource3: 'assets/js/bootstrap.min.js',
+      scriptSource4: 'assets/js/owl-carousel.js',
+      scriptSource5: 'assets/js/accordions.js',
+      scriptSource6: 'assets/js/datepicker.js',
+      scriptSource7: 'assets/js/scrollreveal.min.js',
+      scriptSource8: 'assets/js/waypoints.min.js',
+      scriptSource9: 'assets/js/jquery.counterup.min.js',
+      scriptSource10: 'assets/js/imgfix.min.js',
+      scriptSource11: 'assets/js/slick.js',
+      scriptSource12: 'assets/js/lightbox.js',
+      scriptSource13: 'assets/js/isotope.js',
+      scriptSource14: 'assets/js/custom.js'
+    };
+  },
+};
+</script>
