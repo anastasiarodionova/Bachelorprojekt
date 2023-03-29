@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "webshop-24e2d",
+    "dist": "webshop-24e2d"
+  },
+  "targets": {},
+  "etags": {}
+}
