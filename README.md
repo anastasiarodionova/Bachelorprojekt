@@ -1,7 +1,5 @@
 # Webshop
 
-<img src="./public/img/logo.png" alt="Alt text" title="Optional title">
-
 ## Project setup
 ```
 npm install
