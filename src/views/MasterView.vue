@@ -10,8 +10,8 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo"> 
-                            <img :src="logo" width=" " height=" " alt="Logo"> </a> 
+                        <a href="index.html" class="logo"> </a> 
+                            <img :src="logo" width=" " height="" alt=""> 
                             
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -309,7 +309,7 @@
                     <div class="thumb">
                         <div class="icon">
                             <a href="http://instagram.com">
-                                <h6>Fashion</h6>
+                                <h5>Fashion</h5>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
@@ -320,7 +320,7 @@
                     <div class="thumb">
                         <div class="icon">
                             <a href="http://instagram.com">
-                                <h6>New</h6>
+                                <h5>New</h5>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
@@ -331,7 +331,7 @@
                     <div class="thumb">
                         <div class="icon">
                             <a href="http://instagram.com">
-                                <h6>Brand</h6>
+                                <h5>Brand</h5>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
@@ -342,7 +342,7 @@
                     <div class="thumb">
                         <div class="icon">
                             <a href="http://instagram.com">
-                                <h6>Necklace</h6>
+                                <h5>Necklace</h5>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
@@ -353,7 +353,7 @@
                     <div class="thumb">
                         <div class="icon">
                             <a href="http://instagram.com">
-                                <h6>Earrings</h6>
+                                <h5>Earrings</h5>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
@@ -364,7 +364,7 @@
                     <div class="thumb">
                         <div class="icon">
                             <a href="http://instagram.com">
-                                <h6>Pearl</h6>
+                                <h5>Pearl</h5>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
@@ -449,6 +449,7 @@
 import Header from './pages/HeaderMain.vue';
 import Footer from './pages/FooterMain.vue';
 import { RouterLink } from './pages/SingleProduct.vue';
+import axios from 'axios';
 
 export default {
   data() {
@@ -475,10 +476,30 @@ export default {
       whiteLogo:'frontend/assets/images/white-logo.png'
     };
   },
+  mounted(){
+        axios.get('https://dog.ceo/api/breed/appenzeller/images/random').then(response => {
+            if(response.data.status){
+                this.dogUrl = response.data.message;
+                this.loading=false;
+            }else{
+                console.log("Error getting image")
+            }
+        })
+    },
+  methods:{
+        post(){
+        
+        }
+    }
 };
 </script>
 
 <style>
+
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
+
 .w1 {
   width: 800px;
   height: 1000px;

@@ -12,7 +12,6 @@ if (process.env.FB_KEYS) {
   // Check the default config file second
   fei.initializeApp(require(DEFAULT_CONFIG_FILE), DATABASE_URL);
 } else {
-  // Hopefully in Cloud env and can use default credentials
   admin.initializeApp({
     credential: admin.credential.applicationDefault(),
     databaseURL: DATABASE_URL,

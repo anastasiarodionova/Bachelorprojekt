@@ -1,5 +1,6 @@
 import Dexie from 'dexie';
-  
+ 
+//Wrapper-Bibliothek für indexedDB - die Standard-Datenbank im Browser
 const App = () => {
     super('db');
     const db = new Dexie("webshop");
@@ -9,7 +10,7 @@ const App = () => {
     const [offSet, setOffSet] = useState(1);
     const [totalData, setTotalData] = useState([]);
     const [totalCount, setTotalCount] = useState(1);
-    const setAllData = () => {
+    const setAllData = () => { //alle Daten von der API abgerufen und in der IndexDb gespeichert
       axios
         .get(`https://dummyjson.com/products?limit=10&skip=10&select=title,price.json`)
         .then(async (res) => {
@@ -18,11 +19,11 @@ const App = () => {
       getTotalCount();
       getData(1);
     }; 
-    const getTotalCount = async () => {
+    const getTotalCount = async () => { //die Gesamtzahl der Daten in der Datenbank
       let count = await db.products.count();
       setTotalCount(count);
     };
-    const getData = async (product) => {
+    const getData = async (product) => { //paginierten Daten aus der IndexDB
       setOffSet(product);
       const productData = await db.products
         .offset(product)
@@ -38,6 +39,7 @@ const App = () => {
       setAllData();
     }, []);
 
+    //Asynchrone Datenverarbeitung
     function main() {
         const loadDbButton = document.querySelector("#load");
         const queryDbButton = document.querySelector("#query");

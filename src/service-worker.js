@@ -1,13 +1,15 @@
 import { precacheAndRoute } from "workbox-precaching";
-import { CacheFirst } from "workbox-strategies";
+import { NetworkFirst } from "workbox-strategies";
 import { ExpirationPlugin } from "workbox-expiration";
 import { registerRoute } from "workbox-routing";
-/*import { BackgroundSyncPlugin } from "workbox-background-sync"; 
+
+/*
+import { BackgroundSyncPlugin } from "workbox-background-sync"; 
 
 const BackgroundSyncPlugin = new BackgroundSyncPlugin('myQueueName',{
   maxReentionTime:24*60,
-});
-*/
+}); */
+ 
 
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 
@@ -15,7 +17,7 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(
   ({ request }) => request.destination === "image",
-  new CacheFirst({
+  new NetworkFirst({
     cacheName: "googleapis",
     plugins: [
       new ExpirationPlugin({
@@ -28,11 +30,12 @@ registerRoute(
   })
 );
 
-/*let networkFirstHandler = workbox.strategies.networkFirst({
+/*
+let networkFirstHandler = workbox.strategies.networkFirst({
   cacheName: 'default-cache',});
   workbox.router.registerRoute(
-    funktion(args){
-      return networkFirstHandler.handdle(args).then(function(response){
+    funktion(args),{
+      return :handdle(args).then(function(response){
         if(typeof response=='undefined'){
           return caches.match('offline');
         }
@@ -53,6 +56,27 @@ self.addEventListener("push", function(event) {
     );
   }); 
 
+self.addEventListener('notificationclick', function(event) {
+    console.log('test', event)
+    event.notification.close();
+    const url = 'home';
+    event.waitUntil(
+        self.clients.matchAll({type: 'window'}).then( windowClients => {
+            // Check if there is already a window/tab open with the target URL
+            for (var i = 0; i < windowClients.length; i++) {
+                var client = windowClients[i];
+                // If so, just focus it.
+                if (client.url === url && 'focus' in client) {
+                    return client.focus();
+                }
+            }
+            if (self.clients.openWindow) {
+                console.log("open window")
+            }
+        })
+    )
+  }, false);
+
 
 self.addEventListener("fetch", function (event) {
   event.respondWith(
@@ -66,5 +90,5 @@ self.addEventListener("fetch", function (event) {
 self.addEventListener("sync", function (event) {
   if(event.tag == 'unique-tag-name'){
 
-  }
+  } 
 }); */
